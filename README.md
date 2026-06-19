@@ -42,10 +42,11 @@ Phase 2 (Joint Discrepancy Calibration): Calibrates parameters alongside a learn
 
 
 If you use this code or framework in your research, please consider citing our work:
-
+```
 @article{venkataramanan2026apic,
   title={APIC: Amortized Physics-Informed Calibration using Neural Processes},
   author={Venkataramanan, Aishwarya and Vemuri, Sai Karthikeya and Denzler, Joachim},
   journal={arXiv preprint arXiv:2606.03355},
   year={2026}
 }
+```
