@@ -49,14 +49,12 @@ class CNPEncoder(BaseAPICEncoder):
         ctx = torch.cat([t_c, x_c, u_c], dim=-1) # [B, N, 3]
         h = self.input_projection(ctx)           # [B, N, hidden]
         
-        # Permutation-invariant aggregation via Mean Pooling (Eq. from CNP literature)
+        # Permutation-invariant aggregation via Mean Pooling 
         r = torch.mean(h, dim=1)                 # [B, hidden]
         
         z_out = self.to_z(r)
         z_mean, z_logvar = torch.split(z_out, self.z_dim, dim=-1)
         
-        # CNP is deterministic; logvar is technically zeroed or unused, but kept for interface matching
-        z_logvar = torch.fill_(torch.zeros_like(z_logvar), -20.0) 
         
         raw_theta = self.theta_head(z_mean)
         return z_mean, z_logvar, raw_theta

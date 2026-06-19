@@ -1,7 +1,5 @@
 """
 Training execution pipeline for APIC (Amortized Physics-Informed Calibration).
-Supports dynamic configuration of model architectures and training hyperparameters
-via command-line arguments.
 """
 
 import argparse
