@@ -19,8 +19,8 @@ APIC utilizes a dual-latent architecture to decouple system parameters $\theta$ 
 1. Installation
 
 ```
-git clone [https://github.com/your-username/apic-calibration.git](https://github.com/your-username/apic-calibration.git)
-cd apic-calibration
+git clone https://github.com/cvjena/APIC.git
+cd APIC
 pip install -r requirements.txt
 ```
 
